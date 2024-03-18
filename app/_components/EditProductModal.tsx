@@ -75,56 +75,7 @@ const EditUserProductForm = ({ closeModal }: { closeModal: () => void }) => {
       validationSchema={validationSchema}
       onSubmit={onSubmit}
     >
-      {(formik: {
-        handleSubmit: FormEventHandler<HTMLFormElement> | undefined;
-        handleChange: ChangeEventHandler<HTMLInputElement> | undefined;
-        handleBlur: FocusEventHandler<HTMLInputElement> | undefined;
-        values: {
-          category: string | number | readonly string[] | undefined;
-          price: string | number | readonly string[] | undefined;
-          quantity: string | number | readonly string[] | undefined;
-          value: string | number | readonly string[] | undefined;
-        };
-        touched: { category: any; price: any; quantity: any; value: any };
-        errors: {
-          category:
-            | string
-            | number
-            | boolean
-            | ReactElement<any, string | JSXElementConstructor<any>>
-            | Iterable<ReactNode>
-            | ReactPortal
-            | null
-            | undefined;
-          price:
-            | string
-            | number
-            | boolean
-            | ReactElement<any, string | JSXElementConstructor<any>>
-            | Iterable<ReactNode>
-            | ReactPortal
-            | null
-            | undefined;
-          quantity:
-            | string
-            | number
-            | boolean
-            | ReactElement<any, string | JSXElementConstructor<any>>
-            | Iterable<ReactNode>
-            | ReactPortal
-            | null
-            | undefined;
-          value:
-            | string
-            | number
-            | boolean
-            | ReactElement<any, string | JSXElementConstructor<any>>
-            | Iterable<ReactNode>
-            | ReactPortal
-            | null
-            | undefined;
-        };
-      }) => {
+      {(formik) => {
         return (
           <form
             className="complete-hidden-scroll-style flex grow flex-col gap-4 overflow-y-auto"
@@ -165,11 +116,11 @@ const EditUserProductForm = ({ closeModal }: { closeModal: () => void }) => {
                   id="price"
                   name="price"
                   type="text"
-                  onChange={(e) => {
+                  onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
                     formik.handleChange(e);
                     formik.setFieldValue(
                       "value",
-                      e.target.value * formik.values.quantity
+                      Number(e.target.value) * Number(formik.values.quantity)
                     );
                   }}
                   onBlur={formik.handleBlur}
@@ -194,11 +145,11 @@ const EditUserProductForm = ({ closeModal }: { closeModal: () => void }) => {
                   id="quantity"
                   name="quantity"
                   type="text"
-                  onChange={(e) => {
+                  onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
                     formik.handleChange(e);
                     formik.setFieldValue(
                       "value",
-                      e.target.value * formik.values.price
+                      Number(e.target.value) * Number(formik.values.price)
                     );
                   }}
                   onBlur={formik.handleBlur}

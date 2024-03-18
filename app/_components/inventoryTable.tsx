@@ -226,14 +226,14 @@ export default function InventoryTable() {
                 <Image
                   priority
                   src={visibleOnIcon}
-                  alt="Edit product"
+                  alt="Product Visibility On"
                   className="w-[20px] h-[20px] min-w-[20px] min-h-[20px] text-[#c597d4]"
                 />
               ) : (
                 <Image
                   priority
                   src={visibleOffIcon}
-                  alt="Edit product"
+                  alt="Product Visibility Off"
                   className="w-[20px] h-[20px] min-w-[20px] min-h-[20px] text-[#c597d4]"
                 />
               )}
@@ -247,7 +247,7 @@ export default function InventoryTable() {
               <Image
                 priority
                 src={deleteIcon}
-                alt="Edit product"
+                alt="Delete product"
                 className="w-[20px] h-[20px] min-w-[20px] min-h-[20px] text-[#c597d4]"
               />
             </button>

@@ -1,12 +1,12 @@
 "use client";
 
 import Image from "next/image";
-import { Product, selectInventoryData } from "../appSlice";
-import { useAppSelector } from "../_hooks/reduxHooks";
-import totalProductIcon from "../../public/images/svg/total-product-icon.svg";
 import noOfCategoryIcon from "../../public/images/svg/no-of-category-icon.svg";
 import outOfStockIcon from "../../public/images/svg/out-of-stock-icon.svg";
+import totalProductIcon from "../../public/images/svg/total-product-icon.svg";
 import totalValueIcon from "../../public/images/svg/total-value-icon.svg";
+import { Product, selectInventoryData } from "../appSlice";
+import { useAppSelector } from "../_hooks/reduxHooks";
 
 interface EachInventoryWidget {
   icon: string;

@@ -1,7 +1,7 @@
 "use client";
 import { Switch } from "@headlessui/react";
-import { useAppDispatch, useAppSelector } from "../_hooks/reduxHooks";
 import { selectIsAdmin, toggleAdmin } from "../appSlice";
+import { useAppDispatch, useAppSelector } from "../_hooks/reduxHooks";
 
 export default function UserToggle() {
   const isAdmin = useAppSelector(selectIsAdmin);

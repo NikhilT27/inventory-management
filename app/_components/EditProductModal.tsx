@@ -1,17 +1,10 @@
+import Image from "@/node_modules/next/image";
 import { Dialog, Transition } from "@headlessui/react";
 import { Formik } from "formik";
-import {
-  ChangeEventHandler,
-  FocusEventHandler,
-  FormEventHandler,
-  Fragment,
-  JSXElementConstructor,
-  ReactElement,
-  ReactNode,
-  ReactPortal,
-} from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { Fragment } from "react";
+import { useDispatch } from "react-redux";
 import * as Yup from "yup";
+import modalCloseIcon from "../../public/images/svg/modal-close-icon.svg";
 import {
   Product,
   selectEditModalData,
@@ -21,8 +14,6 @@ import {
   setIsEditProductModalOpen,
 } from "../appSlice";
 import { useAppSelector } from "../_hooks/reduxHooks";
-import modalCloseIcon from "../../public/images/svg/modal-close-icon.svg";
-import Image from "@/node_modules/next/image";
 
 const EditUserProductForm = ({ closeModal }: { closeModal: () => void }) => {
   const dispatch = useDispatch();

@@ -1,7 +1,7 @@
 "use client";
-import UserToggle from "./userToggle";
-import logoutIcon from "../../public/images/svg/logout-icon.svg";
 import Image from "@/node_modules/next/image";
+import logoutIcon from "../../public/images/svg/logout-icon.svg";
+import UserToggle from "./userToggle";
 
 export default function Navbar() {
   return (

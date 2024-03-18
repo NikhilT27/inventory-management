@@ -200,7 +200,7 @@ export default function InventoryTable() {
           </span>
         </div>
       ),
-      cell: (info: { row: { original: { is_enabled: any } } }) => {
+      cell: (info: any) => {
         return (
           <div className="flex gap-2 border-b border-[#3e3e41] p-4">
             <button
